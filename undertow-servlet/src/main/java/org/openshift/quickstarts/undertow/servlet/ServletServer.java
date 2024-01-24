@@ -57,7 +57,7 @@ public class ServletServer {
                                     .addInitParam("message", "Hello World - Deployed on OCP")
                                     .addMapping("/*"),
                             servlet("MyServlet", MessageServlet.class)
-                                    .addInitParam("message", "MyServlet")
+                                    .addInitParam("message", "MyServlet - updated by Sidd")
                                     .addMapping("/myservlet"));
 
             DeploymentManager manager = defaultContainer().addDeployment(servletBuilder);
