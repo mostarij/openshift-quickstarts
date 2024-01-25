@@ -54,10 +54,10 @@ public class ServletServer {
                     .setDeploymentName("test.war")
                     .addServlets(
                             servlet("MessageServlet", MessageServlet.class)
-                                    .addInitParam("message", "Hello World - Deployed on OCP")
+                                    .addInitParam("message", "Hello World")
                                     .addMapping("/*"),
                             servlet("MyServlet", MessageServlet.class)
-                                    .addInitParam("message", "MyServlet - updated by Sidd")
+                                    .addInitParam("message", "MyServlet")
                                     .addMapping("/myservlet"));
 
             DeploymentManager manager = defaultContainer().addDeployment(servletBuilder);
